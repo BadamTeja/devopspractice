@@ -1,0 +1,78 @@
+File and Directory Commands
+
+ls              # List files
+ls -l            # Long list
+ls -a            # Show hidden files
+pwd              # Current directory
+cd /path         # Change directory
+mkdir dir        # Create directory
+rmdir dir        # Delete empty directory
+rm -r dir        # Delete directory
+touch file       # Create file
+cp src dest      # Copy file
+mv src dest      # Move / rename
+
+File Viewing and Editing
+
+cat file         # View file
+less file        # Scroll view
+head file        # First 10 lines
+tail file        # Last 10 lines
+tail -f file     # Live logs
+nano file        # Edit file
+vi file          # Edit with vim
+
+
+Search and Text Processing 
+
+grep word file               # Search word
+grep -i word file            # Case-insensitive
+grep -r word dir             # Recursive search
+sed 's/old/new/g' file       # Replace text
+awk '{print $1}' file        # Print column
+
+
+Permission and Ownership
+
+chmod 755 file               # Change permissions
+chmod +x script.sh           # Make executable
+chown user:group file        # Change owner
+ls -l                        # View permissions
+
+
+User and Group Management
+
+useradd teja                 # Add user
+passwd teja                  # Set password
+userdel teja                 # Delete user
+groupadd devops              # Add group
+groups teja                  # Check groups
+
+
+Process Management
+
+ps -ef                       # All processes
+top                          # Live processes
+htop                         # Enhanced top
+kill PID                     # Kill process
+kill -9 PID                  # Force kill
+
+
+Networking Commands
+
+ip a                         # IP address
+ping google.com              # Check connectivity
+netstat -tulnp               # Open ports
+ss -tulnp                    # Modern netstat
+curl url                     # HTTP request
+wget url                     # Download file
+
+
+Disk and Memory
+
+df -h                        # Disk usage
+du -sh dir                   # Directory size
+free -h                      # Memory usage
+lsblk                        # Block devices
+mount                        # Mounted filesystems
+
