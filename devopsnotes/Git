@@ -1,0 +1,278 @@
+Got you 👍
+Below are **clean, detailed Git notes** you can **study + revise + use for interviews**, covering the **complete Git workflow up to branches**.
+
+You can copy-paste this into your notes.
+
+---
+
+# 📘 GIT WORKFLOW – DETAILED NOTES (UP TO BRANCHES)
+
+---
+
+## 1️⃣ What is Git?
+
+Git is a **distributed version control system** used to:
+
+* Track code changes
+* Collaborate with teams
+* Maintain history
+* Work on multiple features using branches
+
+---
+
+## 2️⃣ Git Architecture (Very Important)
+
+### Git has 4 main areas:
+
+```
+Working Directory → Staging Area → Local Repository → Remote Repository
+```
+
+### Explanation:
+
+* **Working Directory**: Where you edit files
+* **Staging Area**: Where changes are prepared for commit
+* **Local Repository**: Where commits are stored locally
+* **Remote Repository**: Central repo (GitHub, GitLab)
+
+---
+
+## 3️⃣ Initial Git Setup (One-time)
+
+```bash
+git config --global user.name "BadamTeja"
+git config --global user.email "tejabadam810@gmail.com"
+```
+
+Check config:
+
+```bash
+git config --list
+```
+
+---
+
+## 4️⃣ Creating or Getting a Repository
+
+### Initialize a new repository
+
+```bash
+git init
+```
+
+Creates a hidden `.git` folder.
+
+---
+
+### Clone an existing repository
+
+```bash
+git clone <repo_url>
+```
+
+Example:
+
+```bash
+git clone git@github.com:BadamTeja/devopspractice.git
+```
+
+---
+
+## 5️⃣ Daily Git Workflow (Core Concept)
+
+### Step 1: Check status
+
+```bash
+git status
+```
+
+Shows:
+
+* Modified files
+* Untracked files
+* Staged files
+
+---
+
+### Step 2: Add files to staging
+
+```bash
+git add file.txt
+git add .
+```
+
+Purpose:
+
+* Moves changes from working directory → staging area
+
+---
+
+### Step 3: Commit changes
+
+```bash
+git commit -m "Meaningful commit message"
+```
+
+Purpose:
+
+* Saves snapshot into local repository
+
+---
+
+### Step 4: Push changes to remote
+
+```bash
+git push origin main
+```
+
+Purpose:
+
+* Sends commits to GitHub
+
+---
+
+## 6️⃣ Understanding Git Internals (Interview)
+
+```
+Edit file
+   ↓
+git add
+   ↓
+git commit
+   ↓
+git push
+```
+
+OR
+
+```
+Working Dir → Staging → Local Repo → Remote Repo
+```
+
+---
+
+## 7️⃣ Viewing History
+
+### View commits
+
+```bash
+git log
+```
+
+Exit log:
+
+```text
+Press q
+```
+
+### Compact view
+
+```bash
+git log --oneline
+```
+
+---
+
+## 8️⃣ Branches – Introduction
+
+### What is a branch?
+
+* A branch is a **parallel version of code**
+* Used to develop features without affecting main code
+
+Default branch:
+
+```text
+main (or master)
+```
+
+---
+
+## 9️⃣ Branch Commands (Detailed)
+
+### Check current branch
+
+```bash
+git branch
+```
+
+---
+
+### Create a new branch
+
+```bash
+git branch feature-login
+```
+
+Branch created but not switched.
+
+---
+
+### Switch to branch
+
+```bash
+git checkout feature-login
+```
+
+---
+
+### Create & switch (shortcut)
+
+```bash
+git checkout -b feature-login
+```
+
+---
+
+## 🔟 Working on a Branch
+
+```bash
+git add .
+git commit -m "Added login feature"
+```
+
+Commits stay only in that branch.
+
+---
+
+## 1️⃣1️⃣ Push Branch to GitHub
+
+```bash
+git push origin feature-login
+```
+
+Now branch appears on GitHub.
+
+---
+
+## 1️⃣2️⃣ Merge Branch into Main
+
+```bash
+git checkout main
+git merge feature-login
+```
+
+Then push:
+
+```bash
+git push origin main
+```
+
+---
+
+## 1️⃣3️⃣ Delete Branch (After Merge)
+
+### Local branch delete
+
+```bash
+git branch -d feature-login
+```
+
+### Remote branch delete
+
+```bash
+git push origin --delete feature-login
+```
+
+---
+
