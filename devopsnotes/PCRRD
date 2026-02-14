@@ -1,0 +1,44 @@
+To get code from remote repository to local directory
+
+git pull and press enter
+
+Code Conflict/ Conflict
+
+Consider, Deepak and Srinu
+
+If srinu pull the code from the git first and working on it 
+while srinu working it is the version v1
+Now deepak pull the same v1 and doing changes in the file
+
+So now deepak pushed the code after changes so that it became v2
+
+And now srinu pushing his updated v1 code , it displays an error which is called conflict,
+
+so, srinu should pull the code again it will automatically merge into your existing code and so srinu should work on it according to the changes and need to push again.
+
+
+
+TO revert the changes from local to staging area:
+
+git restore --staged filename(ex: teja.txt)
+
+The file teja.txt will go back to the local directory
+
+
+To go bact from commit changes
+
+git --reset hard commit-id
+
+The commit id should be the one where you want to go back. If u r having 5 commit changes so now you want to go back to 2nd commit change then enter the 2nd commit id in command.
+
+
+
+Delete file from GitHub:
+
+Git rm file name
+
+If you directly use rm command it will delete only in local directory, so use git rm command to delete on remote repository, 
+After deleting the files, again add,commit,push to git then it will update changes.
+
+
+

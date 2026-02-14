@@ -76,3 +76,9 @@ free -h                      # Memory usage
 lsblk                        # Block devices
 mount                        # Mounted filesystems
 
+
+To transfer a file from One Instance to another Instance
+
+scp -i teja-key.pem file.txt ec2-user@54.x.x.x:/home/ec2-user/
+
+In this SCP is secure copy and -i is initiate and they .pem key path and file name(transfer file) and the another instance ip addresss:and path to save on their instance
